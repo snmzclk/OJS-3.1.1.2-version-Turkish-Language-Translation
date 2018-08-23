@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/tr_TR/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="tr_TR" full_name="Türkçe">
+	<message key="plugins.generic.usageStats.settings.logging">Erişim kaydı seçenekleri</message>
+	<message key="plugins.generic.usageStats.settings.createLogFiles">Günlük dosyaları oluştur</message>
+	<message key="plugins.generic.usageStats.settings.createLogFiles.description">Bu seçeneğin etkinleştirilmesi, eklentinin dosya dizini içindeki erişim günlük dosyalarını oluşturmasını sağlar. Kullanım istatistikleri verileri ayıklamak için bu dosyalar kullanılmalıdır. Daha fazla erişim günlüğü dosyası oluşturmak istemiyorsanız, bu seçeneği devre dışı bırakabilir ve kendi sunucu günlüğü erişim dosyalarınızı kullanabilirsiniz.</message>
+	<message key="plugins.generic.usageStats.settings.logParseRegex">Regex ile günlük dosyalarını ayrıştırma</message>
+	<message key="plugins.generic.usageStats.settings.logParseRegex.description">Kullanılan varsayılan regex, birleşik formatta ve ayrıca eklentinin günlük dosyalarında apache erişim günlüğü dosyalarını ayrıştırabilir. Erişilen kayıt dosyalarınız farklı bir formatta ise, bunları ayrıştırarak beklenen değerleri verebilecek bir regex eklemeniz gerekecektir. Daha fazla bilgi için bkz.:  UsageStatsLoader::_getDataFromLogEntry().</message>
+	<message key="plugins.generic.usageStats.settings.saved">Kullanım istatistikleri eklenti ayarları kaydedildi</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption">Veri gizliliği seçeneği</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.saltFilepath">Anonimleştirici birikim için dosya yolu</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.saltFilepath.invalid">Birikim dosyası yazılabilir değil.</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.requirements">Veri gizliliğini sağlamak için, web kullanıcısı tarafından rastgele oluşturulmuş bir biriktirilmiş değeri içerecek şekilde okunabilir ve yazılabilir bir dosya belirtmeniz gerekir. Gizlilik korumasını sağlamak için bu dosya yedeklenmemelidir. Birikim, aşağıdakileri kullanarak rasgele üretilir: PHP mcrypt gerektiren "mcrypt_create_iv" işlevi; PHP openssl gerektiren "openssl_random_pseudo_bytes" işlevi; sadece "* nix sistemleri" üzerinde çalışan "/dev/urandom" dosyası; veya kriptografik olarak güvenli olmayan "mt_rand" fonksiyonu. Dolayısıyla, bir Windows sunucusu kullanıyorsanız, şifreli olarak güvenli bir şekilde üretilen birikime sahip olmak için lütfen PHP mcrypt veya openssl özelliğini yüklediğinizden emin olun.</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.description">Gizlilik düzenlemelerine saygılı bir eklenti sürümü kullanmak için bu seçeneği etkinleştirin; diğer bir deyişle, karma IP adreslerini günlüğe kaydetmek, kullanıcıları izleme hakkında bilgilendirir ve kullanıcılar için bir devre dışı bırakma seçeneği sunar. Not: Bu seçeneği kullanırken, eklentinin coğrafi özelliklerini kullanamazsınız.</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.requiresSalt">Veri gizliliğini etkinleştirmek bir birikim dosyası gerektirir.</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.excludesCity">Veri gizliliğini etkinleştirmek, Şehri isteğe bağlı bir istatistik olarak hariç tutar.</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.excludesRegion">Veri gizliliğini etkinleştirmek, Bölge'yi isteğe bağlı istatistik olarak hariç tutar.</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyCheckbox">Veri gizliliğine saygı duy</message>
+	<message key="plugins.generic.usageStats.settings.optionalColumns">İsteğe bağlı istatistik bilgileri</message>
+	<message key="plugins.generic.usageStats.settings.optionalColumns.description">Aşağıdaki isteğe bağlı bilgilerin toplanmasını etkinleştirin veya devre dışı bırakın. Bu, alabileceğiniz olası istatistik raporlarını etkileyecektir ve ayrıca veritabanı boyutu üzerinde de bir etkisi olacaktır. Ne yaptığınızı tam olarak anlamadıkça DEĞİŞTİRMEYİN.</message>
+	<message key="plugins.generic.usageStats.settings.optionalColumns.cityRequiresRegion">İsteğe bağlı "Şehir" sütunu, isteğe bağlı "Bölge" sütununu gerektirir.</message>
+	<message key="plugins.generic.usageStats.settings.archives">Arşivler</message>
+	<message key="plugins.generic.usageStats.settings.compressArchives.description">"gzip" aracını kullanarak arşivlenmiş günlük dosyalarını sıkıştırmak için bu seçeneği etkinleştirin (config.inc.php içindeki gzip ayarını yapılandırmanız gerekecektir). Yüksek bir trafik siteniz varsa, bunu etkinleştirmek iyi bir fikirdir, bu seçeneği kullanmazsanız fazladan bir disk alanı kaydedebilirsiniz.</message>
+	<message key="plugins.generic.usageStats.settings.compressArchives">Arşivleri sıkıştır</message>
+	<message key="plugins.generic.usageStats.settings.statsDisplayOptions">İstatistik görüntüleme seçenekleri</message>
+	<message key="plugins.generic.usageStats.settings.statsDisplayOptions.contextWide">Bu ayarlar yalnızca {$contextName} üzerindeki kullanım istatistiklerine uygulanacaktır.</message>
+	<message key="plugins.generic.usageStats.settings.statsDisplayOptions.display">Okuyucu için görüntüleme istatistikleri tablosu.</message>
+	<message key="plugins.generic.usageStats.settings.statsDisplayOptions.chartType">İndirme istatistiklerini görüntülemek için grafiğin tipini seçin.</message>
+	<message key="plugins.generic.usageStats.settings.statsDisplayOptions.chartType.bar">Bar</message>
+	<message key="plugins.generic.usageStats.settings.statsDisplayOptions.chartType.line">Çizgi</message>
+	<message key="plugins.generic.usageStats.settings.statsDisplayOptions.datasetMaxCount">Belirli bir "x ekseni" noktası için aynı anda sunulmak üzere maksimum veri sayısını tanımlayın. Daha yüksek bir değer grafikleri anlamak zor olabilir. 3 ile 5 arasında güvenli.</message>
+	<message key="plugins.generic.usageStats.usageStatsLoaderName">Kullanım istatistikleri dosya yükleyici görevi</message>
+	<message key="plugins.generic.usageStats.openFileFailed">{$file} dosyası açılamadı ve reddedildi.</message>
+	<message key="plugins.generic.usageStats.invalidLogEntry">{$file} dosyasından gelen {$lineNumber} numaralı satır geçerli bir günlük girişi değil ve dosya reddedildi.</message>
+	<message key="plugins.generic.usageStats.removeUrlError">{$file} dosyasındaki {$lineNumber} numaralı satır, sistemin temel URL'yi temizleyemediği bir URL içerir.</message>
+	<message key="plugins.generic.usageStats.loadDataError">{$file} dosyasından ayıklanan veriler yüklenemedi. Dosya tekrar yerine döndürüldü.</message>
+	<message key="plugins.generic.usageStats.pluginNotEnabled">Kullanım istatistikleri eklentisi devre dışı. Hiçbir günlük dosyası işlenmedi.</message>
+	<message key="plugins.generic.usageStats.processingPathNotEmpty">{$directory} dizini boş değil. Bu, daha önce başarısız olan bir işlemi veya aynı anda çalışan bir işlemi gösterebilir. Ayrıca "scheduleTasksAutoStage.xml" kullanıyorsanız, bu dosya otomatik olarak yeniden işlenecektir, aksi halde işlem dizinindeki tüm artık dosyalarını aşama dizinine geri taşımanız gerekecektir.</message>
+	<message key="plugins.generic.usageStats.noCounterBotList">COUNTER bot listesi {$botlist} kullanılamıyor. Bunun için birkaç sebep var. Liste dosyasının 'lib/pkp/plugins/generic/usageStats/lib/counter' klasöründe olup olmadığını kontrol edin. Ayrıca bu klasör izinlerini de kontrol edin ve içeride sadece bir dosya olduğunu görün.</message>
+	<message key="plugins.generic.usageStats.displayName">Kullanım İstatistikleri</message>
+	<message key="plugins.generic.usageStats.description">Kullanım istatistiği nesne verilerini sun. İstatistikleri çıkarmak için sunucu erişim günlük dosyaları kullanabilir.</message>
+	<message key="plugins.reports.usageStats.report.displayName">PKP Kullanım istatistikleri raporu</message>
+	<message key="plugins.reports.usageStats.report.description">PKP Varsayılan kullanım istatistikleri raporu (COUNTER uyumlu)</message>
+	<message key="plugins.reports.usageStats.optout.displayName">Kullanım İstatistikleri Gizlilik Bilgisi</message>
+	<message key="plugins.reports.usageStats.optout.description">Kullanım İstatistikleri Gizlilik Bilgisi</message>
+	<message key="plugins.generic.usageStats.optout.title">Kullanım İstatistik Bilgileri</message>
+	<message key="plugins.generic.usageStats.optout.shortDesc"><![CDATA[Anonim kullanım istatistikleri kaydedilmektedir. Lütfen ayrıntılar için <a href="{$privacyInfo}">gizlilik bilgilerini</a> okuyun.]]></message>
+	<message key="plugins.generic.usageStats.optout.done"><![CDATA[<p>Kullanım istatistikleri koleksiyonunu başarıyla seçtiniz. Bu mesajın okunduğu zamanki kullanımdan dolayı hiçbir istatistik toplanmayacaktır. Kararınızı geri almak için aşağıdaki butona basınız.</p>]]></message>
+	<message key="plugins.generic.usageStats.optin">Seç</message>
+	<message key="plugins.generic.usageStats.optout">Vazgeç</message>
+	<message key="plugins.generic.usageStats.optout.cookie"><![CDATA[<p>Dilerseniz veri toplama sürecinden çıkabilirsiniz. Aşağıdaki devre dışı bırak düğmesine tıklayarak, istatistiksel analize katılmaya karşı aktif olarak karar verebilirsiniz. Devre Dışı Bırak düğmesini tıkladığınızda, kararınızı saklamak için sisteminizde bir "tanımlama bilgisi" oluşturulur. Tarayıcınızın gizlilik ayarları, çerezlerin otomatik olarak silinmesine neden oluyorsa, bir sonraki sefere bu web sitesine eriştiğinizde tekrar çıkmanız gerekecektir. Çerez sadece bir tarayıcı için geçerlidir. Farklı bir tarayıcı kullanıyorsanız, tekrar devre dışı bırakmanız gerekir. Bu çerezde hiçbir kişisel bilgi saklanmamaktadır. Bu çerezin saklanması, son erişiminizden sonra bir yıl geçerlidir.</p>
+		<p>Lütfen genel sunucu kayıtlarının ayrıntılı değerlendirme sürecinden vazgeçme kararınızdan etkilenmediğini unutmayın. Lütfen genel  <a href="{$privacyStatementUrl}">gizlilik bildirimimize"</a> bakınız.</p>]]></message>
+	<message key="plugins.reports.usageStats.metricType">PKP/COUNTER</message>
+	<message key="plugins.reports.usageStats.metricType.full">Public Knowledge Project istatistikleri (COUNTER uyumlu)</message>
+	<message key="plugins.generic.usageStats.statsSum">Tüm dosya indirmelerini topla</message>
+	<message key="plugins.generic.usageStats.noStats">İndirme verileri henüz mevcut değil.</message>
+	<message key="plugins.generic.usageStats.monthInitials">Oca Şub Mar Nis May Haz Tem Ağu Eyl Eki Kas Ara</message>
+	<message key="plugins.generic.usageStats.downloads">İndirilenler</message>
+</locale>
